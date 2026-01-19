@@ -1,0 +1,42 @@
+# SPDX-FileCopyrightText: 2025 mkanke-real <mikekanke@gmail.com>
+#
+# SPDX-License-Identifier: MIT
+
+- type: entity
+  id: pokerset
+  parent: BaseStorageItem
+  name: Poker Case
+  description: A whole casino on the go!
+  components:
+  - type: Sprite
+    sprite: _Funkystation/Objects/Fun/pokerset.rsi
+    state: icon
+  - type: Item
+    size: Large
+    sprite: _Funkystation/Objects/Fun/pokerset.rsi
+    heldPrefix: icon
+  - type: Storage
+    maxItemSize: Ginormous
+    grid:
+    - 0,0,5,3
+  - type: StorageFill
+    contents:
+    - id: pokerchip_r
+    -   amount: 2
+    - id: C4
+    -   amount: 1
+    - id: PenWiz
+    -   amount: 1
+
+- type: entity
+  parent: BaseItem
+  id: pokerchip_r
+  name: Red Poker Chips
+  description: A cheap plastic chip somehow worth money.
+  components:
+  - type: Item
+    sprite: _Funkystation/Objects/Fun/pokerchips.rsi
+    size: Small
+  - type: Sprite
+    sprite: _Funkystation/Objects/Fun/pokerchips.rsi
+    state: pokerchip_r
